@@ -28,6 +28,8 @@ function createEmployeeCard(name, position){
     // Making a button to remove employee card
 }
 
+
+
 // Task 3: Converting NodeLists to Arrays for Bulk Updates 
 
 function createBulkEmpStyleUpdate(){
@@ -46,5 +48,21 @@ function setEmployeeCardStyle(currentCard){
     currentCard.style.border = '2px solid white';
     currentCard.style.backgroundColor = 'lightblue';
 } // Styling the card (creativity)
+
+// Task 4: Implementing Removal of Employee Cards with Event Bubbling 
+
+removeBtn.addEventListener('click', (event) => {
+    
+    employeeCard.remove();
+    // Removing card from page
+    
+    event.stopPropagation();
+}); // Preventing propogation
+
+
+employeeCard.addEventListener('click', () => {
+    console.log('Employee Card Clicked:', empName.textContent);
+}); // Logging a message when employee card is clicked
+
 
 
