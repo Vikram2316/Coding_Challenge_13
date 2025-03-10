@@ -28,4 +28,23 @@ function createEmployeeCard(name, position){
     // Making a button to remove employee card
 }
 
+// Task 3: Converting NodeLists to Arrays for Bulk Updates 
+
+function createBulkEmpStyleUpdate(){
+    
+    const employeeCards = document.querySelectorAll('.employee-card');
+    // Selecting all employee cards on page
+    
+    const arrEmployees = Array.from(employeeCards);
+    arrEmployees.forEach((emp) => {
+        setEmployeeCardStyle(emp);
+    })
+}   // Making cards into an array and styling 
+
+
+function setEmployeeCardStyle(currentCard){
+    currentCard.style.border = '2px solid white';
+    currentCard.style.backgroundColor = 'lightblue';
+} // Styling the card (creativity)
+
 
